@@ -7,6 +7,15 @@ https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-o
 
 ### Use Docker
 
+#### Get a Docker container's IP address from the host
+
+```
+$ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' XXXXXXXXXX
+```
+where ```XXXXXXXXXX``` is container name or container id
+
+#### ----
+
 ```
 $ docker container run --publish 80:80 --name webhost --detach nginx
 ```
@@ -36,7 +45,7 @@ $ docker volume inspect maysql-db
 ]
 ```
 As a super suer, you can see a director ```/var/lib/docker/volumes/maysql-db/_data``` in the host machine.
-You can create a volume ahead of running a container ```docker container run ...``, but usually you don't need to do this way for local development.
+You can create a volume ahead of running a container ```docker container run ...```, but usually you don't need to do this way for local development.
 
 #### Persistent Data - Bind Mounting
 
