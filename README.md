@@ -7,6 +7,8 @@ https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-o
 
 ### Use Docker
 
+[Learn Docker & Containers using Interactive Browser-Based Scenarios](https://www.katacoda.com/courses/docker)
+
 #### Get a Docker container's IP address from the host
 
 ```
